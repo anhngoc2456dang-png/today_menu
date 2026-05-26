@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 뭐 먹을까? - 요리 레시피</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font xinh xắn của Hàn -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🍳 오늘 뭐 먹을까?</h1>
+            <p>냉장고에 있는 재료로 요리 레시피를 추천해 드릴게요!</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <label for="ingredients">냉장고 재료를 입력하세요 (쉼표로 구분):</label>
+                <textarea id="ingredients" placeholder="예: 계란, 양파, 치즈, 라면"></textarea>
+                <button onclick="getRecipe()">레시피 받기! 🥣</button>
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>요리사 아저씨가 요리하는 중...</p>
+            </div>
+
+            <div id="result" class="result-box hidden">
+                <h2>🍽️ 추천 레시피: <span id="dish-name"></span></h2>
+                <div id="recipe-content"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by AI & Pink/Yellow</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
